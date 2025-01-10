@@ -1,0 +1,39 @@
+Random Walker Simulator - User Manual
+Welcome to the Random Walker Simulator! This program allows you to simulate the movement of a walker in a two-dimensional space filled with obstacles and portals.
+
+Getting Started:
+Interface Overview:
+The main window consists of a canvas where the simulation takes place and a control panel with buttons.
+The control panel includes buttons for starting the simulation, accessing settings, and getting help.
+Starting the Simulation:
+Click the "Start" button to begin the simulation. The walker will start moving randomly within the canvas.
+Settings:
+Click the gear icon to access the settings window. Here, you can customize various parameters such as walker color, obstacle configuration, and simulation speed.
+Help:
+Click the question mark button to open this user manual, where you can find instructions on how to use the program.
+Simulation Controls:
+Start Button: Begins or restarts the simulation.
+Settings Button: Opens the settings window to customize simulation parameters.
+Help Button: Opens this user manual for assistance.
+Customization Options:
+Walker Color: Change the color of the walker's path.
+Please note that any changes made to the colors of game elements are only applied and saved when there is movement in the simulation. This means that you will see the updated colors reflected immediately as the walker or other elements move. Additionally, adjustments to the simulation's background color are finalized and visibly updated as soon as you close the settings window. This ensures that the visual environment of the game is updated promptly and reflects your customizations without delay, enhancing your overall gaming experience.
+Obstacle Configuration: Add or remove obstacles to the simulation area.
+Simulation Speed: Adjust the speed at which the walker moves within the canvas.
+Additional Features:
+Obstacles: Obstacles are stationary objects that the walker cannot pass through. they can be set in various sizes.
+In our simulation, it is not possible to place two obstacles at the same location, even if they differ in size. This rule ensures that each obstacle occupies a unique position on the game board, preventing overlap and confusion in the gameplay.
+Portals: Portals transport the walker to different locations within the canvas.
+To simplify gameplay and ensure consistency across the simulation, each portal in our game is designed with two endpoints that are identical in size. This uniformity in portal design means that regardless of their position on the board, both ends of a portal will affect the walker in the same manner, ensuring a predictable and straightforward interaction. This design choice helps maintain clarity and balance in the game mechanics, making it easier for players to understand and anticipate the effects of entering or exiting portals.
+Statistics: Track statistics such as the walker's path and number of steps taken.
+The Statistics class in our simulation is designed to meticulously track and analyze the movement and behavior of the walker throughout the game. It records several key metrics: the average distance from the starting point at each step, the number of steps taken to pass a predefined threshold radius of 10 units, and the crossing count across the Y-axis. The average distances are further subdivided into the overall distance from the origin, as well as specific distances along the X and Y axes. This detailed breakdown helps in understanding the walker's trajectory and tendency to move in a particular direction.
+One important aspect to note is the Y-axis crossing count. This metric records every instance the walker crosses the Y-axis, including instances where the walker might use a portal to pass the axis. This ensures that even non-linear paths influenced by portals are accounted for, providing a comprehensive view of movement dynamics across this central axis.
+All collected statistics are saved periodically to a JSON file, ensuring data persistence across sessions. When visualizing this data, graphs are generated to depict these distances and crossings step by step. The file name of each graph includes the date and time of creation, making it easy to track progress over different sessions or compare changes after adjustments in the walker's behavior or environment settings. These visual aids are not only useful for analyzing past performances but also serve as a valuable tool for refining strategies and understanding the impact of different game elements on the walker's path.
+Notes:
+The walker's movement is randomized based on selected walking methods.
+Obstacles and portals can be added or removed using the settings window.
+important two notes about possible misleading things in the simulation:
+In our simulation, both obstacles and portals are defined with specific sizes, which determine how they interact with the walker and each other within the game environment. However, it's important to note that the walker does not have a defined size in the same way. The walker is represented simply as a point on the screen. This visual representation can sometimes create a misleading perception that the walker is overlapping with an obstacle or portal when, in terms of game mechanics, it is not. The interaction rules are based strictly on the mathematical coordinates of the walker and the geometric properties of the obstacles and portals, not on their visual overlap as seen on the screen. This design choice helps simplify movement calculations and interactions within the game.
+In our simulation, the visual representation of obstacles and portals can vary depending on user settings. If images are used to represent these elements, they will appear as perfect circles, maintaining a consistent and uniform shape regardless of screen dimensions. However, if these elements are represented purely by colors without associated images, their shapes will adapt to fit the available space on the screen. This means that the visual representation might stretch or compress to align with both the width and height of the screen, potentially resulting in elliptical shapes rather than perfect circles. This adaptive sizing ensures that the game's visual elements are optimized for diverse screen sizes, enhancing gameplay across different devices.
+Experiment with different settings to observe various simulation outcomes.
+Enjoy Exploring!
