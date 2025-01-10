@@ -1,5 +1,5 @@
 Random Walker Simulator - User Manual
-Welcome to the Random Walker Simulator! This program allows you to simulate the movement of a walker in a two-dimensional space filled with obstacles and portals.
+Welcome to the Random Walker Simulator! This program allows you to simulate the movement of a walker in a two-dimensional infinite space filled with obstacles and portals.
 
 Getting Started:
 Interface Overview:
